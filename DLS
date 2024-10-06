@@ -1,0 +1,37 @@
+def depth_search(start_node,graph,goal,limit):
+  visted=[]
+  def dls(current_node,goal,limit):
+    visited.append(current_node)
+    if current_node==goal:
+      return current_node
+    if limit<=0:
+      return none:
+    for child in graph.get(current_node,[]):
+        result=dls(child,goal,limit-1)
+        if result is not none:
+            return result
+    return none
+  result = dls(start_node, goal, limit)
+  time_complexity = len(visited_nodes)
+  space_complexity = limit  
+  return result, time_complexity, space_complexity
+
+
+if __name__ == "__main__":
+    
+    adjacent_list = {
+        # insert the graph nodes      
+    }
+
+    start_node = '#keep the starting node'
+    goal = '#keep the goal node'
+    limit = # give the limit 
+    result, time_complexity, space_complexity = depth_limited_search(adjacent_list, start_node, goal, limit)
+    
+    if result:
+        print(f"Goal node '{goal}' found.")
+    else:
+        print(f"Goal node '{goal}' not found within depth limit.")
+    
+    print(f"Time Complexity: {time_complexity}")
+    print(f"Space Complexity: {space_complexity}")
